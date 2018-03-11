@@ -1,0 +1,59 @@
+/ToDo: type='button'?
+/ToDo: aria-expanded='false'?
+/ToDo: understand navbar source code
+/ToDo: understand nav source code
+/ToDo: understand sr-only
+nav.navbar.navbar-inverse.navbar-static-top
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed data-toggle='collapse' data-target='#bs-demo' type='button' aria-expanded='false'
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+
+      a.navbar-brand href='#' Brand
+    .collapse.navbar-collapse#bs-demo
+      ul.nav.navbar-nav
+        li.active
+          a href='?tab=css' CSS
+        li
+          a href='?tab=components' Components
+        li
+          a href='?tab=dashboard' Dashboard
+        li
+          a href='?tab=dragon-and-flowers' Dragon & Followers
+        li
+          a href='?tab=doodle' Doodle
+        li
+          a href='?tab=resume' Resume
+        li
+          a href='?tab=data' Data
+        li
+          a href='?tab=game' Game
+        li
+          a href='?tab=simulation' Simulation
+        li
+          a href='?tab=math' Math
+
+
+- if @tab == 'css'
+  = render 'css'
+- elsif @tab == 'components'
+  = render 'components'
+- elsif @tab == 'dashboard'
+  = render 'dashboard'
+- elsif @tab == 'dragon-and-flowers'
+  = render 'dragon_and_flowers'
+- elsif @tab == 'doodle'
+  = render 'doodle'
+- elsif @tab == 'resume'
+  = render 'resume'
+- elsif @tab == 'data'
+  = render 'data'
+- elsif @tab == 'game'
+  = render 'game'
+- elsif @tab == 'simulation'
+  = render 'simulation'
+- elsif @tab == 'math'
+  = render 'math'
